@@ -9,10 +9,10 @@
 <br>
 
 ## 🌱 Pull Requests Rule
-<p>**Title**: N주차 미션 닉네임 (예: 1주차 미션 성현)</p>
-<p>**Reviewers (PR을 리뷰해 줄 팀원)**: 최소 1명</p>
- **Assignees (PR 담당자)**: 본인
- **Labels**: mission
+<div>**Title**: N주차 미션 닉네임 (예: 1주차 미션 성현)</div>
+<div>**Reviewers (PR을 리뷰해 줄 팀원)**: 최소 1명</div>
+<div>**Assignees (PR 담당자)**: 본인</div>
+<div>**Labels**: mission</div>
 
 <br>
 
