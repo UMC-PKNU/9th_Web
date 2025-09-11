@@ -1,14 +1,11 @@
 # 9th-Web
 
----
 
 <h1>💚 UMC PKNU 9th_Web</h1>
 
----
 
 [UMC PKNU 9기를 위한 깃허브 사용법 및 규칙](https://www.notion.so/makeus-challenge/Git-Hub-26ab57f4596b8116aa1bd5f98f55a63f?pvs=25)  
 
----
 
 ## 🌱 Pull Requests Rule
 - **Title**: N주차 미션 닉네임 (예: 1주차 미션 성현)
