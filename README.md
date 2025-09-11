@@ -1,8 +1,8 @@
-# 9th-SpringBoot
+# 9th-Web
 
 ---
 
-💚 UMC PKNU 9th_SpringBoot - A팀
+<h2>💚 UMC PKNU 9th_Web</h2>
 
 ---
 
@@ -31,7 +31,6 @@
 
 | Name | Role | GitHub |
 |------|------|--------|
-| <img src="https://github.com/7004hsh.png" width="50"/> | 현/허성현 | [@7004hsh](https://github.com/7004hsh) |
 
 
 ---
