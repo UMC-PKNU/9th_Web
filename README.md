@@ -9,20 +9,20 @@
 <br>
 
 ## 🌱 Pull Requests Rule
-- **Title**: N주차 미션 닉네임 (예: 1주차 미션 성현)
-- **Reviewers (PR을 리뷰해 줄 팀원)**: 최소 1명
-- **Assignees (PR 담당자)**: 본인
-- **Labels**: mission
+ **Title**: N주차 미션 닉네임 (예: 1주차 미션 성현)
+ **Reviewers (PR을 리뷰해 줄 팀원)**: 최소 1명
+ **Assignees (PR 담당자)**: 본인
+ **Labels**: mission
 
 <br>
 
 ## ✅ Commit Message Convention
-- CHORE: 코드 수정, 내부 파일 수정
-- FEAT: 새로운 기능 추가
-- FIX: 버그 수정
-- DOCS: README 등의 문서 수정
-- TEST: 테스트 코드 추가 및 수정
-- REFACTOR: 코드 리팩토링
+ CHORE: 코드 수정, 내부 파일 수정
+ FEAT: 새로운 기능 추가
+ FIX: 버그 수정
+ DOCS: README 등의 문서 수정
+ TEST: 테스트 코드 추가 및 수정
+ REFACTOR: 코드 리팩토링
 <br>
 
 
