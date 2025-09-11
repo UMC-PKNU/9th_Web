@@ -13,7 +13,6 @@
 - **Assignees (PR 담당자)**: 본인
 - **Labels**: mission
 
----
 
 ## ✅ Commit Message Convention
 - CHORE: 코드 수정, 내부 파일 수정
@@ -23,23 +22,21 @@
 - TEST: 테스트 코드 추가 및 수정
 - REFACTOR: 코드 리팩토링
 
----
+
 ## 👥 Members
 
 | Name | Role | GitHub |
 |------|------|--------|
 
 
----
+
 
 <h2>1. 자신의 브랜치에 프로젝트 업로드하기</h2>
 
----
+
 
 <h2>2. Main 브랜치로 PR(Pull Request) 날리기</h2>
 
----
 
 <h2>3. 스터디원 코드 리뷰해주기</h2>
 
----
