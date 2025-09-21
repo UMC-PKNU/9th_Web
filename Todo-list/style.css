@@ -1,0 +1,103 @@
+/* 전체 화면 */
+body {
+  background-color: #D9D9D9;
+  font-family: "Inter", sans-serif; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.todo {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 16px;
+  width: 500px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.todo__title {
+  font-family: "Darumadrop One", sans-serif;
+  text-align: center;
+  font-size: 28px;
+  color: #9C8868;
+  margin-bottom: 20px;
+  font-weight: 600; 
+}
+
+/* 입력창 */
+.todo__input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo__input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #565656;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+/* 버튼 공통 */
+.todo__btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 700; 
+}
+
+/* 버튼 색상 */
+.todo__btn--add {
+  background-color: #8E7E7E;
+  color: white;
+}
+
+.todo__btn--complete {
+  background-color: #699D77;
+  color: white;
+}
+
+.todo__btn--delete {
+  background-color: #C65252;
+  color: white;
+}
+
+/* 리스트 */
+.todo__lists {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.todo__list {
+  flex: 1;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.todo__list h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #7a5c3e;
+  font-weight: 600;
+}
+
+.todo__list li {
+  list-style: none;
+  background-color: #f9f9f9;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}

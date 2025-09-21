@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Todo</title>
+  <!--CSS 파일 업로드-->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="todo">
+    <h1 class="todo__title">Jay Todo</h1>
+
+    <!-- 입력 영역 -->
+    <div class="todo__input-area">
+      <input type="text" id="task-input" class="todo__input" placeholder="할 일을 입력해주세요." />
+      <button id="add-button" class="todo__btn todo__btn--add">할 일 추가</button>
+    </div>
+
+    <!-- 할 일 목록 -->
+    <div class="todo__lists">
+      <div class="todo__list todo__list--pending">
+        <h2>할 일</h2>
+        <ul id="todo-list"></ul>
+      </div>
+
+      <div class="todo__list todo__list--done">
+        <h2>완료</h2>
+        <ul id="done-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TS 컴파일 결과 연결 -->
+  <script src="dist/script.js"></script>
+</body>
+</html>
