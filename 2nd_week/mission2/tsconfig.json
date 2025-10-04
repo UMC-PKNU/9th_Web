@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "esnext",
+    "isolatedModules": false,  // 이걸 false로 해야 enum 허용
+    "importsNotUsedAsValues": "preserve"  // 타입 전용 모드 제한 해제
+  }
+}

@@ -1,0 +1,111 @@
+body {
+  background-color: black;
+  font-family: Arial, sans-serif; /*Arial이라는 글꼴을 먼저 적용 후, 사용자의 컴퓨터에 해당 글꼴이 없으면 sans-serif(고딕) 계열의 글꼴을 적용*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.todo-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 30px 30px 8px rgba(0, 0, 0, 0.1);
+  width: 450px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.input-area {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#todo-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  position:relative;
+  right:0px;
+  width:350px;
+}
+
+#add-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+#todo-list, #completed-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+#todo-list li, #completed-list li {
+  background-color: #fafafa;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 완료된 항목에 취소선 추가 */
+#completed-list li {
+    
+    color: #888;
+}
+
+
+.complete-button {
+  background-color: #28a745;
+  border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.Local{
+  transform-origin:left;
+  position: relative;
+  left:30px;
+  width: 450px;
+  height:100px;
+  font-size:0.8em;
+  
+}

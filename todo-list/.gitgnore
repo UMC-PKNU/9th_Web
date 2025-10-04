@@ -1,0 +1,6 @@
+# 자동으로 생성된 자바스크립트 파일 무시
+app.js
+dist/
+
+# Node.js 의존성 폴더 (미래를 위해 추가)
+node_modules
