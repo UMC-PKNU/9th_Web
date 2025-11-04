@@ -5,3 +5,8 @@ export const getMyInfo = async () => {
   const response = await instance.get("/users/me");
   return response.data;
 };
+
+// 토큰 인증
+export const verifyToken = async () => {
+  return instance.get("/auth/protected"); 
+};

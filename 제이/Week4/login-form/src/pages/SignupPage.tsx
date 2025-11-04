@@ -71,7 +71,7 @@ const SignupPage = () => {
       });
       console.log("회원가입 성공:", result);
       alert("회원가입이 완료되었습니다!");
-      navigate("/signin");
+      navigate("/login");
     } catch (error: any) {
       console.error("회원가입 실패:", error);
       alert(error.response?.data?.message || "회원가입 중 오류가 발생했습니다.");
