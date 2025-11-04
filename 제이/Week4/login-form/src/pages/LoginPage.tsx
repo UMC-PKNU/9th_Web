@@ -49,29 +49,33 @@ const LoginPage = () => {
       </div>
 
       <div className="flex flex-col gap-3 items-center">
-        {/* 🔹 구글 로그인 버튼 */}
+        {/* 구글 로그인 버튼 */}
         <button
           onClick={handleGoogleClick}
-          className="flex items-center justify-center gap-2 border border-gray-300 rounded-md py-2 px-4 w-[300px] hover:bg-gray-50 transition shadow-sm"
+          className="flex items-center justify-center gap-2 border   border-gray-300 rounded-md py-2 px-4 w-[300px]
+             bg-white text-gray-700 font-medium 
+             hover:bg-gray-100 hover:text-black 
+             active:bg-gray-200 
+             transition-colors duration-200 shadow-sm"
         >
           <img
             src="https://developers.google.com/identity/images/g-logo.png"
             alt="Google Logo"
             className="w-5 h-5"
           />
-          <span className="text-gray-700 font-medium">
+          <span className="text-white-700 font-medium">
             Google 계정으로 로그인
           </span>
         </button>
 
-        {/* 🔹 구분선 */}
+        
         <div className="flex items-center justify-center my-2 w-full">
           <div className="h-[1px] bg-gray-300 w-[100px]" />
           <span className="text-gray-500 text-sm mx-2">또는</span>
           <div className="h-[1px] bg-gray-300 w-[100px]" />
         </div>
 
-        {/* 🔹 일반 로그인 입력 폼 */}
+     
         <div className="flex flex-col gap-3">
           <input
             {...getInputProps("email")}
