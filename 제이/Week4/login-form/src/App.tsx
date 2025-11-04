@@ -1,32 +1,41 @@
 import "./App.css";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import HomePage from "./pages/HomePage.tsx";
-import NotFoundPage from "./pages/NotFoundPage.tsx";
-import LoginPage from "./pages/LoginPage.tsx";
-import SignupPage from "./pages/SignupPage.tsx";
-import HomeLayout from "./layouts/HomeLayout.tsx";
-import MyPage from "./pages/MyPage.tsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
+import HomeLayout from "./layouts/HomeLayout";
+import ProtectedRoute from "./components/ProtectedRoute";
+import MyPage from "./pages/MyPage";
 
 // 홈페이지
-// 로그인 페이지
-// 회원가입 페이지
+// 로그인
+// 회원가입
+// 마이페이지
 
-const router = createBrowserRouter( [
+const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
+    errorElement: <NotFoundPage />,
     children: [
       { path: "/", element: <HomePage /> },
-      { path: "/login", element: <LoginPage /> },
-      { path: "/signup", element: <SignupPage /> },
-      { path: "/my", element: <MyPage />},
+      { path: "login", element: <LoginPage /> },
+      { path: "signup", element: <SignupPage /> },
+      {
+        path: "my",
+        element: (
+          <ProtectedRoute>
+            <MyPage />
+          </ProtectedRoute>
+        ),
+      },
     ],
-    errorElement: <NotFoundPage />,
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />; 
+  return <RouterProvider router={router} />;
 }
 
 export default App;

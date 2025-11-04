@@ -12,7 +12,7 @@ const MyPage = () => {
   }, []);
 
   if (!user) return <div>로딩 중...</div>;
-
+  
   return (
     <div>
       <h1>마이페이지</h1>
