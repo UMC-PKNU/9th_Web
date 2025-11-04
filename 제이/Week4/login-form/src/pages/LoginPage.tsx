@@ -4,6 +4,7 @@ import type { UserSignInformation } from "../utils/validate";
 import { validateSignin } from "../utils/validate";
 import {signin} from "../api/auth"; // 로그인 API
 
+
 const LoginPage = () => {
   const navigate = useNavigate(); // 페이지 이동용
   const { getInputProps, errors, touched, values } = useForm<UserSignInformation>({
@@ -14,7 +15,7 @@ const LoginPage = () => {
     validate: validateSignin,
   });
   
-  // 로그인 API 연동
+  // 로그인 API 요청
   const handleSubmit = async () => {
     try {
       await signin({email: values.email, password: values.password});

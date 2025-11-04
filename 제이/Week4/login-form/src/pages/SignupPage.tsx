@@ -3,10 +3,22 @@ import { validateSignin } from "../utils/validate";
 import { useNavigate } from "react-router-dom";
 import eyeClose from "../assets/eye-close.png";
 import eyeOpen from "../assets/eye-open.png";
-import { signup } from "../api/auth"; 
 import {z} from "zod";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import instance from "../api/axios"; 
+
+// 회원가입 API
+export const signup = async ( data: {
+  name:string;
+  email:string;
+  password: string;
+  bio: string;
+  avatar: string;
+}) => {
+  const response = await instance.post("/auth/signup", data);
+  return response.data;
+};
 
 
 const schema = z.object({
@@ -46,10 +58,26 @@ const SignupPage = () => {
     mode: "onBlur",
   });
 
-  const onSubmit:SubmitHandler<FormFields> = (data) => {
+  const onSubmit:SubmitHandler<FormFields> = async(data) => {
     const {passwordCheck, ...rest} = data;
-    console.log(rest);
+    
+    try {
+      const result = await signup({
+        ...rest,
+        bio: "",
+        avatar: "",
+      });
+      console.log("회원가입 성공:", result);
+      alert("회원가입이 완료되었습니다!");
+      navigate("/signin");
+    }
+
+    catch (error: any) {
+      console.error("회원가입 실패:", error);
+      alert(error.response?.data?.message || "회원가입 중 오류 발생");
+    }
   };
+
   return <div className="flex flex-col items-center justify-center h-full gap-6">
       
       <div className="relative w-[300px]">
@@ -59,7 +87,7 @@ const SignupPage = () => {
         >
           {"<"}
         </span>
-        <h2 className="text-2xl font-semibold text-center">로그인</h2>
+        <h2 className="text-2xl font-semibold text-center">회원가입</h2>
       </div>
 
       
