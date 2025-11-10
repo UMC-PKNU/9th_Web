@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import instance from "../api/axios";
+import { useNavigate } from "react-router-dom";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+
 
 
 // 마이페이지 내 정보 조회 API 호출
@@ -10,6 +13,8 @@ export const getMyInfo = async() => {
 
 const MyPage = () => {
   const [user, setUser] = useState<any>(null);
+  const navigate = useNavigate();
+  const {  removeItem } = useLocalStorage("accessToken");
 
   useEffect(() => {
     (async () => {
@@ -17,6 +22,12 @@ const MyPage = () => {
       setUser(data);
     })();
   }, []);
+
+  const handleLogout = () => {
+    removeItem(); //토큰 삭제
+    navigate("/login"); // 로그아웃 시 로그인 페이지로 이동
+    
+  }
 
   if (!user) return <div>로딩 중...</div>;
   
@@ -26,7 +37,10 @@ const MyPage = () => {
       <p>이름: {user.name}</p>
       <p>이메일: {user.email}</p>
       <p>가입일: {new Date(user.createdAt).toLocaleDateString()}</p>
-      <button className = "w-full bg-pink-600 rounded-md">로그아웃</button>
+      <button 
+      onClick={handleLogout}
+      className = "w-full bg-pink-600 rounded-md">
+        로그아웃</button>
     </div>
   );
 };
