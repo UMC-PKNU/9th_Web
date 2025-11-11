@@ -10,17 +10,17 @@ export type Likes = {
   userId: number;
   lpId: number;
 }
-
 export type ResponseLpListDto = CursorBaseResponse<{
-  data: {
-     title: number,
-     content: string,
-     thumbnail: string,
-     published: boolean,
-     authorId: number,
-     createdAt: Date,
-     updatedAt: Date,
-     tags: Tag[];
-     likes: Likes[];    
-  };
+  data:{
+    title: string;
+    content: string;
+    thumbnail: string;
+    published: boolean;
+    authorId: number;
+    createdAt: Date;
+    updatedAt: Date;
+    tags: Tag[];
+    likes: Likes[];
+  }[];
 }>;
+

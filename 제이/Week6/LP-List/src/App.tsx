@@ -10,7 +10,7 @@ import MyPage from "./pages/MyPage";
 import GoogleLoginRedirectPage from "./pages/GoogleLoginRedirectPage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { AuthProvider } from "./contexts/AuthContext"; // ✅ 추가 필요
+import { AuthProvider } from "./contexts/AuthContext"; 
 
 const router = createBrowserRouter([
   {
@@ -35,7 +35,13 @@ const router = createBrowserRouter([
 ]);
 
 
-export const queryClient = new QueryClient();
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries:{
+      retry: 3, // 쿼리에 관한 요청 3번
+    },
+  },
+});
 
 function App() {
   return (

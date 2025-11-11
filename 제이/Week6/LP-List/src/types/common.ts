@@ -14,9 +14,12 @@ export type CursorBaseResponse<T> = {
   hasNext: boolean;
 };
 
+export type PAGINATION_ORDER = "asc" | "desc";
+
 export type PaginationDto = {
   cursor?: number;
   limit?: number;
   search?: string;
-  order?: string
+  order?: PAGINATION_ORDER;
 }
+
