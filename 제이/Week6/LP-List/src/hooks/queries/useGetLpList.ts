@@ -1,0 +1,20 @@
+import { useQuery } from "@tanstack/react-query";
+import type { PaginationDto } from "../../types/common";
+import { getLpList } from "../../api/lp";
+import { QUERY_KEY } from "../../constants/key";
+
+
+function useGetLpList({ cursor, search, order, limit }: PaginationDto) {
+  return useQuery({
+    queryKey: [QUERY_KEY.lps],
+    queryFn: () =>
+      getLpList({
+        cursor,
+        search,
+        order,
+        limit,
+      }),
+  });
+}
+
+export default useGetLpList;
