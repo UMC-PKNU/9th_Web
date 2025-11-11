@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 
 const HomeLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-white">
+    <div className="min-h-screen flex flex-col bg-white text-black">
     
       <header className="w-full bg-black text-white flex justify-between items-center px-8 py-4">
         <h1 className="text-pink-500 font-bold text-xl">
