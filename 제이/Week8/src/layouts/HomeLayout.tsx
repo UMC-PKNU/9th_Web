@@ -41,8 +41,8 @@ const HomeLayout = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-black">
-      <header className="w-full bg-black text-white flex justify-between items-center px-8 py-4">
+    <div className="min-h-screen flex flex-col bg-black text-black">
+      <header className="w-full bg-black text-white flex justify-between items-center px-8 py-4 border-b border-gray-400">
         <h1 className="text-pink-500 font-bold text-xl">
           <Link to="/">홈페이지</Link>
         </h1>
