@@ -33,7 +33,7 @@ const HomeLayout = () => {
   }, [location.pathname]); 
   // location.pathname을 deps로 넣어야 페이지 이동 시 재검사 됨
 
-  if (!authChecked) return <div>로딩 중...</div>;
+  if (!authChecked) return <div className="text-white">로딩 중...</div>;
 
   // 보호 페이지인데 로그인 안 된 경우 → 로그인으로 이동
   if (!openPages.includes(location.pathname) && !isLogin) {

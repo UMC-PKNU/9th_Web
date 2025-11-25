@@ -4,21 +4,24 @@ import { getLpList } from "../../api/lp";
 import { QUERY_KEY } from "../../constants/key";
 
 function useGetLpList({ cursor, search, order, limit }: PaginationDto) {
+  const trimmed = search?.trim() || "";     // 공백 제거된 검색어
+  const effectiveSearch = trimmed === "" ? null : trimmed;
+
   return useQuery({
-    queryKey: [QUERY_KEY.lps, search, order],
+    queryKey: [QUERY_KEY.lps, effectiveSearch, order],
     queryFn: async () => {
       const response = await getLpList({
         cursor,
-        search,
+        search: trimmed,
         order,
         limit,
       });
       console.log("useGetLpList 응답 데이터:", response);
       return response;
     },
-    enabled: search?.trim() !=="", // 빈 문자열, 공백일 경우 api 요청 x
+    enabled: effectiveSearch !== null,   // 공백이면 호출 안함
     staleTime: 1000 * 60 * 5,
-    gcTime: 100 * 60 * 10,
+    gcTime: 1000 * 60 * 10,
   });
 }
 
