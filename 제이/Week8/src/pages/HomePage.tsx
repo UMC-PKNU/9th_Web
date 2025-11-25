@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import useGetLpList from "../hooks/queries/useGetLpList";
 import magnifier from "../assets/magnifier.png";
+import useDebounce from "../hooks/useDebounce";
 
 const HomePage = () => {
-  const [search, setSearch] = useState("타입");
-  const { data, isPending, isError } = useGetLpList({ search });
+  const [search, setSearch] = useState("");
+  const debouncedSearch = useDebounce(search, 300);
+
+  // api는 debounce된 검색어로 호출
+  const { data, isPending, isError } = useGetLpList({ search: debouncedSearch });
 
   useEffect(() => {
     if (data) {

@@ -16,6 +16,7 @@ function useGetLpList({ cursor, search, order, limit }: PaginationDto) {
       console.log("useGetLpList 응답 데이터:", response);
       return response;
     },
+    enabled: search?.trim() !=="", // 빈 문자열, 공백일 경우 api 요청 x
     staleTime: 1000 * 60 * 5,
     gcTime: 100 * 60 * 10,
   });
